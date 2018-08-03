@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - wormhole = wormhole.cli.cli:wormhole
@@ -34,6 +34,7 @@ requirements:
     - tqdm >=4.13.0
     - click
     - humanize
+    - service_identity
 
 test:
   commands:
