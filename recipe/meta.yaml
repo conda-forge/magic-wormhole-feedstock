@@ -34,6 +34,7 @@ requirements:
     - tqdm >=4.13.0
     - click
     - humanize
+    - service_identity
 
 test:
   commands:
