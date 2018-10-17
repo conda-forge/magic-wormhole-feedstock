@@ -1,6 +1,6 @@
 {% set name = "magic-wormhole" %}
-{% set version = "0.10.5" %}
-{% set sha256 = "2d44237c7da2f916e8e8a86d77622e0bd0e1ec2770dc126dab657a8c4bed2d07" %}
+{% set version = "0.11.0" %}
+{% set sha256 = "619b2bd0c657df1e5ec6e890a9c568331822e8147402380fffab9b2a0d036d0d" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - wormhole = wormhole.cli.cli:wormhole
