@@ -11,9 +11,10 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  noarch: python
-  number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  #noarch: python
+  number: 1
+  script: "{{ PYTHON }} -m pip install . -vv"
+  skip: True  # [not win]
   entry_points:
     - wormhole = wormhole.cli.cli:wormhole
 
