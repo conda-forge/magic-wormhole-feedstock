@@ -1,6 +1,6 @@
 {% set name = "magic-wormhole" %}
 {% set version = "0.11.2" %}
-{% set sha256 = "d9507b3062ad63862344977f0a80c9d4ba5801c4404191ff8a425ff051bfe0b2" %}
+{% set sha256 = "55fd24b8c148d0f2c12160040dd061a5749bcda269adf97de6a697c9416c1052" %}
 
 package:
   name: {{ name|lower }}
