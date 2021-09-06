@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - wormhole = wormhole.cli.cli:wormhole
@@ -35,6 +35,7 @@ requirements:
     - click
     - humanize
     - service_identity
+    - txtorcon >=18.0.2
 
 test:
   commands:
