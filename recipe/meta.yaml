@@ -12,17 +12,17 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - wormhole = wormhole.cli.cli:wormhole
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
   run:
-    - python
+    - python >={{ python_min }}
     - spake2 ==0.8
     - pynacl
     - six
@@ -37,6 +37,8 @@ requirements:
     - service_identity
 
 test:
+  requires:
+    - python {{ python_min }}
   commands:
     - wormhole --version
     - wormhole --help
