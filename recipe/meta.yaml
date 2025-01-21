@@ -1,14 +1,12 @@
-{% set name = "magic-wormhole" %}
-{% set version = "0.16.0" %}
-{% set sha256 = "39844782472f40574dbeaa84ebcb263e07c8d4af32ac355aaf7b5033672d4a70" %}
+{% set version = "0.17.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: magic-wormhole
   version: {{ version }}
 
 source:
-  url: https://github.com/warner/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://github.com/warner/magic-wormhole/archive/{{ version }}.tar.gz
+  sha256: a305fe79da93ba857afca6bfc297d94d4578ca78b6820be91350d3aab9fc49e2
 
 build:
   noarch: python
@@ -19,15 +17,15 @@ build:
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python
-    - spake2 ==0.8
+    - python >={{ python_min }}
+    - spake2 ==0.9
     - pynacl
     - six
-    - attrs >=16.3.0
+    - attrs >=19.2.0
     - twisted >=17.5.0
     - autobahn >=0.14.1
     - automat
@@ -36,13 +34,20 @@ requirements:
     - click
     - humanize
     - service_identity
+    - txtorcon >=18.0.2
+    - zipstream-ng >=1.7.1,<2.0.0
+    - iterable-io >=1.0.0,<2.0.0
 
 test:
   commands:
     - wormhole --version
     - wormhole --help
+    - pip check
   imports:
     - wormhole
+  requires:
+    - pip
+    - python {{ python_min }}
 
 about:
   home: http://github.com/warner/magic-wormhole
