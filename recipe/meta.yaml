@@ -1,4 +1,4 @@
-{% set version = "0.17.0" %}
+{% set version = "0.19.1" %}
 
 package:
   name: magic-wormhole
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/warner/magic-wormhole/archive/{{ version }}.tar.gz
-  sha256: a305fe79da93ba857afca6bfc297d94d4578ca78b6820be91350d3aab9fc49e2
+  sha256: 52e7e114f56364b638c6b9e6d809162ca7fdacc9525a38c57dc917ad02b17ee5
 
 build:
   noarch: python
