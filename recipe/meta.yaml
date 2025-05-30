@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/warner/magic-wormhole/archive/{{ version }}.tar.gz
-  sha256: 8e618ce6abe90a0742954c005944087ca04fc316cf97dc89b89146ba7efb8872
+  sha256: 52e7e114f56364b638c6b9e6d809162ca7fdacc9525a38c57dc917ad02b17ee5
 
 build:
   noarch: python
