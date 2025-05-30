@@ -1,4 +1,6 @@
 {% set version = "0.19.1" %}
+# https://github.com/magic-wormhole/magic-wormhole/issues/592
+{% set python_min = "3.10" %}
 
 package:
   name: magic-wormhole
@@ -6,7 +8,7 @@ package:
 
 source:
   url: https://github.com/warner/magic-wormhole/archive/{{ version }}.tar.gz
-  sha256: 52e7e114f56364b638c6b9e6d809162ca7fdacc9525a38c57dc917ad02b17ee5
+  sha256: 8e618ce6abe90a0742954c005944087ca04fc316cf97dc89b89146ba7efb8872
 
 build:
   noarch: python
@@ -20,6 +22,7 @@ requirements:
     - python {{ python_min }}
     - pip
     - setuptools
+    - versioneer
   run:
     - python >={{ python_min }}
     - spake2 ==0.9
@@ -37,6 +40,7 @@ requirements:
     - txtorcon >=18.0.2
     - zipstream-ng >=1.7.1,<2.0.0
     - iterable-io >=1.0.0,<2.0.0
+    - qrcode >=8.0
 
 test:
   commands:
