@@ -27,16 +27,14 @@ requirements:
     - python >={{ python_min }}
     - spake2 ==0.9
     - pynacl
-    - six
     - attrs >=19.2.0
     - twisted >=17.5.0
-    - autobahn >=0.14.1
+    - autobahn >=0.14.1,!=25.9.1,!=25.10.1,!=25.10.2,!=25.11.1,!=25.12.1
     - automat
-    - hkdf
+    - cryptography
     - tqdm >=4.13.0
     - click
     - humanize
-    - service_identity
     - txtorcon >=18.0.2
     - zipstream-ng >=1.7.1,<2.0.0
     - iterable-io >=1.0.0,<2.0.0
