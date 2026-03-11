@@ -1,4 +1,4 @@
-{% set version = "0.22.0" %}
+{% set version = "0.23.0" %}
 # https://github.com/magic-wormhole/magic-wormhole/issues/592
 {% set python_min = "3.10" %}
 
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://github.com/warner/magic-wormhole/archive/{{ version }}.tar.gz
-  sha256: 14a6029263c49109d71b0d0a82737690645d33f4067513bce2c7cca20da837ab
+  sha256: 340e13ccfe4ec825f62b516df67cce3bd1e0008bae3cf7a6c1f0ffd2d7287b53
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: python -m pip install . -vv
   entry_points:
     - wormhole = wormhole.cli.cli:wormhole
